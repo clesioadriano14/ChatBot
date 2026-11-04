@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Chat com IA</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="app">
+            <aside id="menu" class="menu">
+                <button id="novaConversa" class="nova" type="button">+ Nova
+                    conversa</button>
+                <nav id="lista" class="lista" aria-label="Conversas"></nav>
+            </aside>
+            <div id="fundoMenu" class="fundo-menu"></div>
+
+            <section class="chat">
+                <header class="topo">
+                    <button id="abrirMenu" class="icone" type="button"
+                        aria-label="Mostrar ou esconder as conversas"
+                        aria-expanded="true">☰</button>
+                    <h1 id="titulo">Nova conversa</h1>
+                </header>
+
+                <div class="chave">
+                    <label for="chave">Sua chave da API (Groq)</label>
+                    <input id="chave" type="password" placeholder="gsk_..."
+                        autocomplete="off">
+                    <a href="https://console.groq.com/keys" target="_blank"
+                        rel="noopener">Criar chave</a>
+                </div>
+
+                <main id="mensagens" class="mensagens"
+                    aria-live="polite"></main>
+
+                <form id="formulario" class="formulario">
+                    <textarea id="entrada" rows="1"
+                        placeholder="Digite sua mensagem" aria-label="Mensagem"
+                        required></textarea>
+                    <button id="enviar" type="submit">Enviar</button>
+                </form>
+            </section>
+        </div>
+        <script src="script.js"></script>
+    </body>
+</html>
